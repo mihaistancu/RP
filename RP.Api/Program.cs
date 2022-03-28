@@ -48,6 +48,22 @@ app.MapDelete("/api/sed/{sedCode}/{sedVersion}/metadata",
         return Results.Ok();
     });
 
+app.MapPut("/api/sed",
+    (HttpRequest request) => {
+        var package = request.Form.Files.Single().OpenReadStream();        
+        var useCase = new AddSedMetadata();
+        useCase.Execute(package);
+        return Results.Ok();
+    });
+
+app.MapPut("/api/labels",
+    (HttpRequest request) => {
+        var package = request.Form.Files.Single().OpenReadStream();        
+        var useCase = new AddSedLabels();
+        useCase.Execute(package);
+        return Results.Ok();
+    });
+
 app.Run();
 
 public record SetSedStatusRequest(string status) {}
