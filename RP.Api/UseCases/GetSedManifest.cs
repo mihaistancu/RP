@@ -34,7 +34,7 @@ public class GetSedManifest
     {
     }
 
-    public record Version(string versionNumber, string status) 
+    public record Version(string version, string status) 
     {
     }
 }
