@@ -41,6 +41,13 @@ app.MapPut("/api/sed/{sedCode}/{sedVersion}",
         return Results.Ok();
     });
 
+app.MapDelete("/api/sed/{sedCode}/{sedVersion}/metadata",
+    (string sedCode, string sedVersion) => {
+        var useCase = new DeleteSedMetadata();
+        useCase.Execute(sedCode, sedVersion);
+        return Results.Ok();
+    });
+
 app.Run();
 
 public record SetSedStatusRequest(string status) {}
