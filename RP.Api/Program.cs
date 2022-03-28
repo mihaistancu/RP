@@ -16,7 +16,8 @@ app.UseHttpsRedirection();
 app.MapGet("/api/sed-manifest", () =>
 {
     var useCase = new GetSedManifest();
-    return useCase.Execute();
+    var manifest = useCase.Execute();
+    return Results.Ok(manifest);
 });
 
 app.MapGet("/api/sed/{sedCode}/{sedVersion}/metadata", 
@@ -33,4 +34,13 @@ app.MapGet("/api/sed/{sedCode}/{sedVersion}/labels/{country}/{language}",
         return Results.Stream(metadata, @"application\json");
     });
 
+app.MapPut("/api/sed/{sedCode}/{sedVersion}", 
+    (string sedCode, string sedVersion, SetSedStatusRequest request) => {
+        var useCase = new SetSedStatus();
+        useCase.Execute(sedCode, sedVersion, request.status);
+        return Results.Ok();
+    });
+
 app.Run();
+
+public record SetSedStatusRequest(string status) {}
