@@ -1,7 +1,11 @@
 public class DeleteSedMetadata
 {
-    public void Execute(string sed, string version)
+    public void Execute(DeleteSedMetadataRequest request)
     {
         
     }
 }
+
+public record DeleteSedMetadataRequest(List<SedToDelete> seds){}
+
+public record SedToDelete(string sed, string version){}
