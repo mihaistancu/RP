@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "RP.Db/1.0.0": {
+        "dependencies": {
+          "RP.Services": "1.0.0"
+        },
+        "runtime": {
+          "RP.Db.dll": {}
+        }
+      },
+      "RP.Entities/1.0.0": {
+        "runtime": {
+          "RP.Entities.dll": {}
+        }
+      },
+      "RP.Services/1.0.0": {
+        "dependencies": {
+          "RP.Entities": "1.0.0"
+        },
+        "runtime": {
+          "RP.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RP.Db/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RP.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RP.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

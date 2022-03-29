@@ -1,0 +1,17 @@
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\bin\Debug\net7.0\RP.Repositories.deps.json
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\bin\Debug\net7.0\RP.Repositories.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\bin\Debug\net7.0\RP.Repositories.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\bin\Debug\net7.0\RP.Entities.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\bin\Debug\net7.0\RP.Services.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\bin\Debug\net7.0\RP.Services.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\bin\Debug\net7.0\RP.Entities.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.csproj.AssemblyReference.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.AssemblyInfoInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.AssemblyInfo.cs
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.csproj.CopyComplete
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\refint\RP.Repositories.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\RP.Repositories.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Repositories\obj\Debug\net7.0\ref\RP.Repositories.dll

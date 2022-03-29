@@ -1,6 +1,6 @@
 using RP.Api;
-using RP.UseCases.Dependencies;
-using RP.Db;
+using RP.Services.Dependencies;
+using RP.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

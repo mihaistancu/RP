@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RP.UseCases\RP.UseCases.csproj" />
-    <ProjectReference Include="..\RP.Db\RP.Db.csproj" />
+    <ProjectReference Include="..\RP.Services\RP.Services.csproj" />
+    <ProjectReference Include="..\RP.Repositories\RP.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

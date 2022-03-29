@@ -1,0 +1,15 @@
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\bin\Debug\net7.0\RP.Services.deps.json
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\bin\Debug\net7.0\RP.Services.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\bin\Debug\net7.0\RP.Services.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\bin\Debug\net7.0\RP.Entities.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\bin\Debug\net7.0\RP.Entities.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.csproj.AssemblyReference.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.AssemblyInfoInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.AssemblyInfo.cs
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.csproj.CoreCompileInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.csproj.CopyComplete
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\refint\RP.Services.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\RP.Services.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Services\obj\Debug\net7.0\ref\RP.Services.dll
