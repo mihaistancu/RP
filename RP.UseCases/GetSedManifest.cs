@@ -1,3 +1,5 @@
+namespace RP.UseCases;
+
 public class GetSedManifest
 {
     public List<Sector> Execute()

@@ -1,5 +1,7 @@
 using System.IO.Compression;
 
+namespace RP.UseCases;
+
 public class AddSedLabels
 {
     private const string MetadataPath = "c:\\temp\\Labels";

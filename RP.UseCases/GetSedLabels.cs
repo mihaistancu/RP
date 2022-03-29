@@ -1,3 +1,5 @@
+namespace RP.UseCases;
+
 public class GetSedLabels
 {
     public Stream Execute(string sed, string version, string country, string language)

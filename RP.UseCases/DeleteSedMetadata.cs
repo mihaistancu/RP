@@ -1,3 +1,5 @@
+namespace RP.UseCases;
+
 public class DeleteSedMetadata
 {
     public void Execute(DeleteSedMetadataRequest request)

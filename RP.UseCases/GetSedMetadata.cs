@@ -1,3 +1,5 @@
+namespace RP.UseCases;
+
 public class GetSedMetadata
 {
     public Stream Execute(string sed, string version)

@@ -1,0 +1,12 @@
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\bin\Debug\net7.0\RP.UseCases.deps.json
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\bin\Debug\net7.0\RP.UseCases.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\bin\Debug\net7.0\RP.UseCases.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.csproj.AssemblyReference.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.AssemblyInfoInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.AssemblyInfo.cs
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.csproj.CoreCompileInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\refint\RP.UseCases.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\ref\RP.UseCases.dll

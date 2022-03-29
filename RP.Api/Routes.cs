@@ -1,3 +1,7 @@
+using RP.UseCases;
+
+namespace RP.Api;
+
 public static class WebApplicationRoutes 
 {
     public static void AddRoutes(this WebApplication app)
@@ -38,9 +42,9 @@ public static class WebApplicationRoutes
             });
 
         app.MapPut("/api/seds/metadata",
-            (IFormFile file) => {
+            async (IFormFile file) => {
                 var useCase = new AddSedMetadata();
-                useCase.Execute(file.OpenReadStream());
+                await useCase.ExecuteAsync(file.OpenReadStream());
                 return Results.Ok();
             })
             .Accepts<IFormFile>("multipart/form-data");

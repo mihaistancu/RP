@@ -1,3 +1,5 @@
+namespace RP.UseCases;
+
 public class SetSedStatus
 {
     public void Execute(SetSedStatusRequest request)

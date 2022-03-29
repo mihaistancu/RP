@@ -1,3 +1,7 @@
+using RP.Api;
+using RP.UseCases.Dependencies;
+using RP.Db;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -14,5 +18,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.AddRoutes();
+
+Context.Seds = new SedRepository();
 
 app.Run();
