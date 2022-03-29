@@ -20,5 +20,6 @@ app.UseHttpsRedirection();
 app.AddRoutes();
 
 Context.Seds = new SedRepository();
+Context.Labels = new LabelRepository();
 
 app.Run();
