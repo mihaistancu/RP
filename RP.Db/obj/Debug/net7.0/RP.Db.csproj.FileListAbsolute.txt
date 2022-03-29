@@ -13,3 +13,5 @@ C:\Users\Mihai STANCU\Source\repos\RP\RP.Db\obj\Debug\net7.0\RP.Db.dll
 C:\Users\Mihai STANCU\Source\repos\RP\RP.Db\obj\Debug\net7.0\refint\RP.Db.dll
 C:\Users\Mihai STANCU\Source\repos\RP\RP.Db\obj\Debug\net7.0\RP.Db.pdb
 C:\Users\Mihai STANCU\Source\repos\RP\RP.Db\obj\Debug\net7.0\ref\RP.Db.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Db\bin\Debug\net7.0\RP.Entities.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Db\bin\Debug\net7.0\RP.Entities.pdb

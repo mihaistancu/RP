@@ -10,3 +10,6 @@ C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.d
 C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\refint\RP.UseCases.dll
 C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.pdb
 C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\ref\RP.UseCases.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\bin\Debug\net7.0\RP.Entities.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\bin\Debug\net7.0\RP.Entities.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.UseCases\obj\Debug\net7.0\RP.UseCases.csproj.CopyComplete

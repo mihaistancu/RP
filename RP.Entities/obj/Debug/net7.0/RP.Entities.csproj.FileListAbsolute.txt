@@ -1,0 +1,12 @@
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\bin\Debug\net7.0\RP.Entities.deps.json
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\bin\Debug\net7.0\RP.Entities.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\bin\Debug\net7.0\RP.Entities.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\RP.Entities.csproj.AssemblyReference.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\RP.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\RP.Entities.AssemblyInfoInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\RP.Entities.AssemblyInfo.cs
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\RP.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\RP.Entities.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\refint\RP.Entities.dll
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\RP.Entities.pdb
+C:\Users\Mihai STANCU\Source\repos\RP\RP.Entities\obj\Debug\net7.0\ref\RP.Entities.dll

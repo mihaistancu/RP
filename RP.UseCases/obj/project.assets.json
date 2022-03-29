@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "RP.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/RP.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RP.Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "RP.Entities/1.0.0": {
+      "type": "project",
+      "path": "../RP.Entities/RP.Entities.csproj",
+      "msbuildProject": "../RP.Entities/RP.Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "RP.Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Mihai STANCU\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Mihai STANCU\\Source\\repos\\RP\\RP.Entities\\RP.Entities.csproj": {
+              "projectPath": "C:\\Users\\Mihai STANCU\\Source\\repos\\RP\\RP.Entities\\RP.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "RP.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/RP.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RP.Entities.dll": {}
+        }
+      },
       "RP.UseCases/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "RP.Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/RP.UseCases.dll": {}
         },
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "RP.Entities/1.0.0": {
+      "type": "project",
+      "path": "../RP.Entities/RP.Entities.csproj",
+      "msbuildProject": "../RP.Entities/RP.Entities.csproj"
+    },
     "RP.UseCases/1.0.0": {
       "type": "project",
       "path": "../RP.UseCases/RP.UseCases.csproj",

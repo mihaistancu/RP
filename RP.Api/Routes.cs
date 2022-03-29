@@ -35,9 +35,9 @@ public static class Routes
             });
 
         app.MapPost("/api/seds/batch/delete-metadata",
-            (DeleteSedMetadataRequest request) => {
+            async (DeleteSedMetadataRequest request) => {
                 var useCase = new DeleteSedMetadata();
-                useCase.Execute(request);
+                await useCase.ExecuteAsync(request);
                 return Results.Ok();
             });
 

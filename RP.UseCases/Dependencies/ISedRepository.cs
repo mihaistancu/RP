@@ -2,5 +2,9 @@ namespace RP.UseCases.Dependencies;
 
 public interface ISedRepository 
 {
-    Task SaveAsync(string name, Stream stream);
+    Task AddAsync(string name, Stream stream);
+
+    Task DeleteAsync(List<SedToDelete> seds);
+
+    Task SetStatusAsync(List<SedToUpdate> seds, string status);
 }

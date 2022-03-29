@@ -11,7 +11,7 @@ public class AddSedMetadata
         
         foreach (ZipArchiveEntry entry in archive.Entries)
         {
-            await Context.Seds.SaveAsync(entry.Name, entry.Open());
+            await Context.Seds.AddAsync(entry.Name, entry.Open());
         }
     }
 }

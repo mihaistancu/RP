@@ -14,7 +14,15 @@
           "RP.Db.dll": {}
         }
       },
+      "RP.Entities/1.0.0": {
+        "runtime": {
+          "RP.Entities.dll": {}
+        }
+      },
       "RP.UseCases/1.0.0": {
+        "dependencies": {
+          "RP.Entities": "1.0.0"
+        },
         "runtime": {
           "RP.UseCases.dll": {}
         }
@@ -23,6 +31,11 @@
   },
   "libraries": {
     "RP.Db/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RP.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
