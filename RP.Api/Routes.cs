@@ -38,25 +38,19 @@ public static class WebApplicationRoutes
             });
 
         app.MapPut("/api/seds/metadata",
-            WithUpload(package => {
+            (IFormFile file) => {
                 var useCase = new AddSedMetadata();
-                useCase.Execute(package);
+                useCase.Execute(file.OpenReadStream());
                 return Results.Ok();
-            }));
+            })
+            .Accepts<IFormFile>("multipart/form-data");
 
         app.MapPut("/api/seds/labels",
-            WithUpload(package => {
+            (IFormFile file) => {
                 var useCase = new AddSedLabels();
-                useCase.Execute(package);
+                useCase.Execute(file.OpenReadStream());
                 return Results.Ok();
-            }));
-    }
-
-    private static Action<HttpRequest> WithUpload(Func<Stream, IResult> handler) 
-    {
-        return (HttpRequest request) => {
-            var stream = request.Form.Files.Single().OpenReadStream();
-            handler(stream);
-        };
+            })
+            .Accepts<IFormFile>("multipart/form-data");
     }
 }
