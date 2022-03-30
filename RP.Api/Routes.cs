@@ -14,10 +14,11 @@ public static class Routes
         });
 
         app.MapGet("/api/seds/{sedCode}/{sedVersion}/metadata", 
-            (string sedCode, string sedVersion) => {
+            async (string sedCode, string sedVersion) => {
                 var useCase = new GetSedMetadata();
-                var metadata = useCase.Execute(sedCode, sedVersion);
-                return Results.Stream(metadata, @"application\json");
+                var metadata = await useCase.ExecuteAsync(sedCode, sedVersion);
+                var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(metadata));
+                return Results.Stream(stream, @"application\json");
             });
 
         app.MapGet("/api/seds/{sedCode}/{sedVersion}/labels/{country}/{language}", 

@@ -6,46 +6,59 @@ namespace RP.Repositories;
 
 public class SedRepository: ISedRepository
 {
-    private const string MetadataPath = "c:\\temp\\Metadata";
+    private List<InMemoryRecord> db = new List<InMemoryRecord>();
 
     public async Task<List<ManifestItem>> GetManifest()
     {
-        var manifest = new List<ManifestItem>();
-
-        foreach (var file in Directory.GetFiles(MetadataPath))
-        {
-            var tokens = Path.GetFileName(file).Split('_');
-            manifest.Add(new ManifestItem(tokens[0], tokens[1], tokens[2], tokens[3]));
-        }
-
+        var manifest = db.Select(r => new ManifestItem(r.Sector, r.Code, r.Version, r.Status)).ToList();
         return await Task.FromResult(manifest);
     }
 
     public async Task AddAsync(Sed sed, String metadata) 
     {
-        var path = $@"{MetadataPath}\{sed.Sector}_{sed.Code}_{sed.Version}_{sed.Status}";
-        await File.WriteAllTextAsync(path, metadata);
+        db.Add(new InMemoryRecord(sed.Sector, sed.Code, sed.Version, sed.Status, metadata));
+        await Task.CompletedTask;
     }
 
     public async Task DeleteAsync(List<SedToDelete> seds)
     {
-        foreach (var sed in seds)        
-        foreach (var file in Directory.EnumerateFiles($"{MetadataPath}\\*_{sed.Code}_{sed.Version}_*"))
+        foreach (var sed in seds)
         {
-            File.Delete(file);
-        }   
+            db.RemoveAll(r => r.Code == sed.Code && r.Version == sed.Version);
+        }
         await Task.CompletedTask;
     }
 
     public async Task SetStatusAsync(List<SedToUpdate> seds, string status)
     {
-        foreach (var sed in seds)        
-        foreach (var file in Directory.EnumerateFiles($"{MetadataPath}\\*_{sed.Code}_{sed.Version}_*"))
+        foreach (var sed in seds)
         {
-            var newFile = file.Substring(0, file.LastIndexOf("_") + 1) + status;
-
-            File.Move(file, newFile);
-        }   
+            db.Single(r=>r.Code == sed.Code && r.Version == sed.Version).Status = status;
+        }
         await Task.CompletedTask;
+    }
+
+    public async Task<String> GetMetadata(string sedCode, string sedVersion)
+    {
+        var metadata = db.Single(r=>r.Code == sedCode && r.Version == sedVersion).Metadata;
+        return await Task.FromResult(metadata);
+    }
+
+    private class InMemoryRecord 
+    {
+        public string Sector {get;set;}
+        public string Code {get;set;}
+        public string Version {get;set;}
+        public string Status {get;set;}
+        public string Metadata {get;set;}
+
+        public InMemoryRecord(string sector, string code, string version, string status, string metadata)
+        {
+            Sector = sector;
+            Code = code;
+            Version = version;
+            Status = status;
+            Metadata = metadata;
+        }
     }
 }
