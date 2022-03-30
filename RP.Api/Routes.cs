@@ -24,8 +24,9 @@ public static class Routes
         app.MapGet("/api/seds/{sedCode}/{sedVersion}/labels/{country}/{language}", 
             (string sedCode, string sedVersion, string country, string language) => {
                 var useCase = new GetSedLabels();
-                var metadata = useCase.Execute(sedCode, sedVersion, country, language);
-                return Results.Stream(metadata, @"application\json");
+                var content = useCase.Execute(sedCode, sedVersion, country, language);
+                var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(content));
+                return Results.Stream(stream, @"application\json");
             });
 
         app.MapPost("/api/seds/batch/update-status",  

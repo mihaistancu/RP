@@ -15,4 +15,9 @@ public class LabelRepository: ILabelRepository
     {
         db.Add(new InMemoryRecord(labels.Code, labels.Version, labels.Country, labels.Language, labels.Content));
     }
+
+    public string Get(string code, string version, string country, string language)
+    {
+        return db.Single(r => r.Code == code && r.Version == version && r.Country == country && r.Language == language).Content;
+    }
 }

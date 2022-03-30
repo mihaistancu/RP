@@ -4,8 +4,8 @@ namespace RP.Services;
 
 public class GetSedMetadata
 {
-    public String Execute(string sed, string version)
+    public String Execute(string code, string version)
     {
-        return Context.Seds.GetMetadata(sed, version);
+        return Context.Seds.GetMetadata(code, version);
     }
 }
