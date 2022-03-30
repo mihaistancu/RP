@@ -17,16 +17,14 @@ public static class Routes
             (string sedCode, string sedVersion) => {
                 var useCase = new GetSedMetadata();
                 var metadata = useCase.Execute(sedCode, sedVersion);
-                var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(metadata));
-                return Results.Stream(stream, @"application\json");
+                return RawJson(metadata);
             });
 
         app.MapGet("/api/seds/{sedCode}/{sedVersion}/labels/{country}/{language}", 
             (string sedCode, string sedVersion, string country, string language) => {
                 var useCase = new GetSedLabels();
-                var content = useCase.Execute(sedCode, sedVersion, country, language);
-                var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(content));
-                return Results.Stream(stream, @"application\json");
+                var labels = useCase.Execute(sedCode, sedVersion, country, language);
+                return RawJson(labels);
             });
 
         app.MapPost("/api/seds/batch/update-status",  
@@ -48,15 +46,19 @@ public static class Routes
                 var useCase = new AddSedMetadata();
                 useCase.Execute(file.OpenReadStream());
                 return Results.Ok();
-            })
-            .Accepts<IFormFile>("multipart/form-data");
+            });
 
         app.MapPut("/api/seds/labels",
             (IFormFile file) => {
                 var useCase = new AddSedLabels();
                 useCase.Execute(file.OpenReadStream());
                 return Results.Ok();
-            })
-            .Accepts<IFormFile>("multipart/form-data");
+            });
+    }
+
+    private static IResult RawJson(string json)
+    {
+        var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(json));
+        return Results.Stream(stream, @"application\json");
     }
 }
