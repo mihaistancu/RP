@@ -6,9 +6,9 @@ namespace RP.Services;
 
 public class AddSedMetadata
 {
-    private SedParser sedFactory = new SedParser();
+    private SedParser sedParser = new SedParser();
 
-    public async Task ExecuteAsync(Stream package)
+    public void Execute(Stream package)
     {
         using (ZipArchive archive = new ZipArchive(package, ZipArchiveMode.Read))
         
@@ -16,8 +16,8 @@ public class AddSedMetadata
         {
             var reader = new StreamReader(entry.Open());
             var metadata = reader.ReadToEnd(); 
-            var sed = sedFactory.Parse(metadata);
-            await Context.Seds.AddAsync(sed, metadata);
+            var sed = sedParser.Parse(metadata);
+            Context.Seds.Add(sed, metadata);
         }
     }
 }

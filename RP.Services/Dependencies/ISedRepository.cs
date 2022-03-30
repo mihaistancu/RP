@@ -4,13 +4,13 @@ namespace RP.Services.Dependencies;
 
 public interface ISedRepository 
 {
-    Task<List<ManifestItem>> GetManifest();
+    List<ManifestItem> GetManifest();
 
-    Task AddAsync(Sed sed, String metadata);
+    void Add(Sed sed, String metadata);
 
-    Task DeleteAsync(List<SedToDelete> seds);
+    void Delete(List<SedToDelete> seds);
     
-    Task<String> GetMetadata(string sedCode, string sedVersion);
+    string GetMetadata(string sedCode, string sedVersion);
 
-    Task SetStatusAsync(List<SedToUpdate> seds, string status);
+    void SetStatus(List<SedToUpdate> seds, string status);
 }

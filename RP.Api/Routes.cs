@@ -6,17 +6,17 @@ public static class Routes
 {
     public static void AddRoutes(this WebApplication app)
     {
-        app.MapGet("/api/seds/manifest", async () =>
+        app.MapGet("/api/seds/manifest", () =>
         {
             var useCase = new GetSedManifest();
-            var manifest = await useCase.ExecuteAsync();
+            var manifest = useCase.Execute();
             return Results.Ok(manifest);
         });
 
         app.MapGet("/api/seds/{sedCode}/{sedVersion}/metadata", 
-            async (string sedCode, string sedVersion) => {
+            (string sedCode, string sedVersion) => {
                 var useCase = new GetSedMetadata();
-                var metadata = await useCase.ExecuteAsync(sedCode, sedVersion);
+                var metadata = useCase.Execute(sedCode, sedVersion);
                 var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(metadata));
                 return Results.Stream(stream, @"application\json");
             });
@@ -36,24 +36,24 @@ public static class Routes
             });
 
         app.MapPost("/api/seds/batch/delete-metadata",
-            async (DeleteSedMetadataRequest request) => {
+            (DeleteSedMetadataRequest request) => {
                 var useCase = new DeleteSedMetadata();
-                await useCase.ExecuteAsync(request);
+                useCase.Execute(request);
                 return Results.Ok();
             });
 
         app.MapPut("/api/seds/metadata",
-            async (IFormFile file) => {
+            (IFormFile file) => {
                 var useCase = new AddSedMetadata();
-                await useCase.ExecuteAsync(file.OpenReadStream());
+                useCase.Execute(file.OpenReadStream());
                 return Results.Ok();
             })
             .Accepts<IFormFile>("multipart/form-data");
 
         app.MapPut("/api/seds/labels",
-            async (IFormFile file) => {
+            (IFormFile file) => {
                 var useCase = new AddSedLabels();
-                await useCase.ExecuteAsync(file.OpenReadStream());
+                useCase.Execute(file.OpenReadStream());
                 return Results.Ok();
             })
             .Accepts<IFormFile>("multipart/form-data");

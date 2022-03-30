@@ -8,40 +8,35 @@ public class SedRepository: ISedRepository
 {
     private List<InMemoryRecord> db = new List<InMemoryRecord>();
 
-    public async Task<List<ManifestItem>> GetManifest()
+    public List<ManifestItem> GetManifest()
     {
-        var manifest = db.Select(r => new ManifestItem(r.Sector, r.Code, r.Version, r.Status)).ToList();
-        return await Task.FromResult(manifest);
+        return db.Select(r => new ManifestItem(r.Sector, r.Code, r.Version, r.Status)).ToList();        
     }
 
-    public async Task AddAsync(Sed sed, String metadata) 
+    public void Add(Sed sed, String metadata) 
     {
-        db.Add(new InMemoryRecord(sed.Sector, sed.Code, sed.Version, sed.Status, metadata));
-        await Task.CompletedTask;
+        db.Add(new InMemoryRecord(sed.Sector, sed.Code, sed.Version, sed.Status, metadata));        
     }
 
-    public async Task DeleteAsync(List<SedToDelete> seds)
+    public void Delete(List<SedToDelete> seds)
     {
         foreach (var sed in seds)
         {
             db.RemoveAll(r => r.Code == sed.Code && r.Version == sed.Version);
         }
-        await Task.CompletedTask;
     }
 
-    public async Task SetStatusAsync(List<SedToUpdate> seds, string status)
+    public void SetStatus(List<SedToUpdate> seds, string status)
     {
         foreach (var sed in seds)
         {
             db.Single(r=>r.Code == sed.Code && r.Version == sed.Version).Status = status;
         }
-        await Task.CompletedTask;
     }
 
-    public async Task<String> GetMetadata(string sedCode, string sedVersion)
+    public string GetMetadata(string sedCode, string sedVersion)
     {
-        var metadata = db.Single(r=>r.Code == sedCode && r.Version == sedVersion).Metadata;
-        return await Task.FromResult(metadata);
+        return db.Single(r=>r.Code == sedCode && r.Version == sedVersion).Metadata;
     }
 
     private class InMemoryRecord 

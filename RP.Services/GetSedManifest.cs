@@ -4,9 +4,9 @@ namespace RP.Services;
 
 public class GetSedManifest
 {
-    public async Task<List<ManifestItem>> ExecuteAsync()
+    public List<ManifestItem> Execute()
     {
-        return await Context.Seds.GetManifest();
+        return Context.Seds.GetManifest();
     }
 }
 

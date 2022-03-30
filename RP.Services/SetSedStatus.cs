@@ -6,7 +6,7 @@ public class SetSedStatus
 {
     public void Execute(SetSedStatusRequest request)
     {
-        Context.Seds.SetStatusAsync(request.Seds, request.Status);
+        Context.Seds.SetStatus(request.Seds, request.Status);
     }
 }
 

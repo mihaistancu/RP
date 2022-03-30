@@ -4,8 +4,8 @@ namespace RP.Services;
 
 public class GetSedMetadata
 {
-    public async Task<String> ExecuteAsync(string sed, string version)
+    public String Execute(string sed, string version)
     {
-        return await Context.Seds.GetMetadata(sed, version);
+        return Context.Seds.GetMetadata(sed, version);
     }
 }

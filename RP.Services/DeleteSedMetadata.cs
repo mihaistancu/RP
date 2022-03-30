@@ -4,9 +4,9 @@ using RP.Services.Dependencies;
 
 public class DeleteSedMetadata
 {
-    public async Task ExecuteAsync(DeleteSedMetadataRequest request)
+    public void Execute(DeleteSedMetadataRequest request)
     {
-        await Context.Seds.DeleteAsync(request.Seds);
+        Context.Seds.Delete(request.Seds);
     }
 }
 
