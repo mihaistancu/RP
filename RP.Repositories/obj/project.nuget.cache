@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IC5+fU4aROETSD68tcexl2WA+D2cDmCgDiIo+wUQj8msylDTt9dZ38rGPS16i3xWf1RoYMzcwwO8IAtgJEIv6w==",
+  "dgSpecHash": "xTdYTJJbvEw+srtiMpOyMHWq6HoWe2T3Dp9eEFkZZBQe5DbZcEwf1O6GOpwNO0t0+E7Fj9bpumuWOHkFCgZExA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mihai STANCU\\Source\\repos\\RP\\RP.Repositories\\RP.Repositories.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Mihai STANCU\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

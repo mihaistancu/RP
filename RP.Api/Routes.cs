@@ -6,10 +6,10 @@ public static class Routes
 {
     public static void AddRoutes(this WebApplication app)
     {
-        app.MapGet("/api/seds/manifest", () =>
+        app.MapGet("/api/seds/manifest", async () =>
         {
             var useCase = new GetSedManifest();
-            var manifest = useCase.Execute();
+            var manifest = await useCase.ExecuteAsync();
             return Results.Ok(manifest);
         });
 

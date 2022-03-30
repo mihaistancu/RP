@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7u5XltP7oS5qA4kkR/iByJPE4UMH8QB25LprKJmSSbNDN8rdBviGxvnkbPXx+dckqOCsdU/EEL3jENxfIBmNVw==",
+  "dgSpecHash": "8/k3W5As90KzOn7w3DRg0SQUZW+6fcmrkwiftBq6O9w/U6dXoN9p2FRLdKrO0PoW6eioMHdTow9r+KiRTmtnDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mihai STANCU\\Source\\repos\\RP\\RP.Entities\\RP.Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Mihai STANCU\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

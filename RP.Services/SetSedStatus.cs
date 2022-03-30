@@ -12,4 +12,4 @@ public class SetSedStatus
 
 public record SetSedStatusRequest(List<SedToUpdate> Seds, string Status) {}
 
-public record SedToUpdate(string Sed, string Version) {}
+public record SedToUpdate(string Code, string Version) {}
