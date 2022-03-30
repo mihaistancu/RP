@@ -1,0 +1,1 @@
+public record SedLabels(string Code, string Version, string Country, string Language, string Labels);

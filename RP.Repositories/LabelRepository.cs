@@ -1,16 +1,18 @@
-﻿using RP.Services.Dependencies;
+﻿using RP.Services;
+using RP.Services.Dependencies;
 
 namespace RP.Repositories;
 
 public class LabelRepository: ILabelRepository
 {
+    private record InMemoryRecord(string Code, string Version, string Country, string Language, string Content);
+ 
+    List<InMemoryRecord> db = new List<InMemoryRecord>();
+
     private const string MetadataPath = "c:\\temp\\Labels";
 
-    public async Task SaveAsync(string name, Stream stream) 
+    public void Add(LabelsToAdd labels) 
     {
-        var path = Path.Combine(MetadataPath, name);
-        var fileStream = File.Create(path);
-        await stream.CopyToAsync(fileStream);
-        fileStream.Close();
+        db.Add(new InMemoryRecord(labels.Code, labels.Version, labels.Country, labels.Language, labels.Content));
     }
 }
