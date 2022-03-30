@@ -6,6 +6,11 @@ namespace RP.Repositories;
 
 public class SedRepository: ISedRepository
 {
+    private record InMemoryRecord(string Sector, string Code, string Version, string Metadata)
+    {
+        public string Status {get;set;}
+    }
+
     private List<InMemoryRecord> db = new List<InMemoryRecord>();
 
     public List<ManifestItem> GetManifest()
@@ -13,9 +18,9 @@ public class SedRepository: ISedRepository
         return db.Select(r => new ManifestItem(r.Sector, r.Code, r.Version, r.Status)).ToList();        
     }
 
-    public void Add(Sed sed, String metadata) 
+    public void Add(SedToAdd sed) 
     {
-        db.Add(new InMemoryRecord(sed.Sector, sed.Code, sed.Version, sed.Status, metadata));        
+        db.Add(new InMemoryRecord(sed.Sector, sed.Code, sed.Version, sed.Metadata){Status = sed.Status});        
     }
 
     public void Delete(List<SedToDelete> seds)
@@ -37,23 +42,5 @@ public class SedRepository: ISedRepository
     public string GetMetadata(string sedCode, string sedVersion)
     {
         return db.Single(r=>r.Code == sedCode && r.Version == sedVersion).Metadata;
-    }
-
-    private class InMemoryRecord 
-    {
-        public string Sector {get;set;}
-        public string Code {get;set;}
-        public string Version {get;set;}
-        public string Status {get;set;}
-        public string Metadata {get;set;}
-
-        public InMemoryRecord(string sector, string code, string version, string status, string metadata)
-        {
-            Sector = sector;
-            Code = code;
-            Version = version;
-            Status = status;
-            Metadata = metadata;
-        }
     }
 }

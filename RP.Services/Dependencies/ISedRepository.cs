@@ -6,7 +6,7 @@ public interface ISedRepository
 {
     List<ManifestItem> GetManifest();
 
-    void Add(Sed sed, String metadata);
+    void Add(SedToAdd sed);
 
     void Delete(List<SedToDelete> seds);
     

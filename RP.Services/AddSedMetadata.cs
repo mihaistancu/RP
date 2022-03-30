@@ -6,7 +6,7 @@ namespace RP.Services;
 
 public class AddSedMetadata
 {
-    private SedParser sedParser = new SedParser();
+    private SedMetadataParser sedParser = new SedMetadataParser();
 
     public void Execute(Stream package)
     {
@@ -16,8 +16,11 @@ public class AddSedMetadata
         {
             var reader = new StreamReader(entry.Open());
             var metadata = reader.ReadToEnd(); 
-            var sed = sedParser.Parse(metadata);
-            Context.Seds.Add(sed, metadata);
+            var parsed = sedParser.Parse(metadata);
+            var sedToAdd = new SedToAdd(parsed.Sector, parsed.Code, parsed.Version, metadata, "Draft");
+            Context.Seds.Add(sedToAdd);
         }
     }
 }
+
+public record SedToAdd(string Sector, string Code, string Version, string Metadata, string Status);
