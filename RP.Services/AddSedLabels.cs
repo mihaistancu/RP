@@ -8,7 +8,7 @@ public class AddSedLabels
 {
     private SedLabelsParser parser = new SedLabelsParser();
 
-    public void Execute(Stream package)
+    public virtual void Execute(Stream package)
     {
         using (ZipArchive archive = new ZipArchive(package, ZipArchiveMode.Read))
         
@@ -18,8 +18,13 @@ public class AddSedLabels
             var content = reader.ReadToEnd(); 
             var parsed = parser.Parse(content);
             var labelsToAdd = new LabelsToAdd(parsed.Code, parsed.Version, parsed.Country, parsed.Language, content);
-            Context.Labels.Add(labelsToAdd);
+            Add(labelsToAdd);    
         }
+    }
+
+    public virtual void Add(LabelsToAdd labelsToAdd)
+    {
+        Context.Labels.Add(labelsToAdd);
     }
 }
 
